@@ -1,5 +1,5 @@
 :root {
-  --accent: #208aef;
+  --accent: #5b34d9;
   --ink: #17212b;
   --muted: #5b6676;
   --line: #e1e6ed;
@@ -8,7 +8,7 @@
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --ink: #f2f4f7; --muted: #a7b0bd; --line: #2e3135; --bg: #0b0d10; --card: #17191d; }
+  :root { --accent: #a98bff; --ink: #f2f4f7; --muted: #a7b0bd; --line: #2e2a3d; --bg: #0e0c17; --card: #1a1726; }
 }
 * { box-sizing: border-box; }
 body {
@@ -18,7 +18,11 @@ body {
   background: var(--bg);
 }
 header {
-  background: linear-gradient(160deg, #2692f5, #0a3e96);
+  /* Same dark purple and glow as the App Store screenshots and the launch screen. */
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 0%, #7b4dff99, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 100% 30%, #ff7a5c66, transparent 70%),
+    #120f1f;
   color: #fff;
   padding: 48px 20px 40px;
   text-align: center;
